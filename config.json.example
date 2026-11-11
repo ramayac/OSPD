@@ -1,0 +1,56 @@
+{
+  "_comment": "OSPD (Organize and Sorting Photo Dump) Configuration Template. Copy this file to 'config.json' and customize.",
+  
+  "pictures_root": "/home/username/Pictures",
+  "data_dir": "./data-run",
+  
+  "sync_client": "none",
+  
+  "untrusted_mtime_windows": [
+    {
+      "start": "2026-10-30T00:00:00",
+      "end": "2026-11-01T23:59:59",
+      "_note": "Dates in this window will not trust filesystem mtime; EXIF or filename date required."
+    }
+  ],
+  
+  "camera_dump_patterns": [
+    "^camera(\\s+roll)?$",
+    "^dcim(/.*)?$",
+    "^samsung(\\s+gallery)?(/.*)?$",
+    "^galer[ií]a(\\s+de\\s+samsung)?(/.*)?$",
+    "^google(\\s+photos)?(/.*)?$",
+    "^camera uploads?$",
+    "^cybershot$",
+    "^lumix$"
+  ],
+  
+  "wallpaper_patterns": [
+    "^wallpapers?(\\s+\\d+)?$",
+    "^backgrounds?$",
+    "^desktop(\\s+backgrounds?)?$",
+  ],
+  
+  "art_patterns": [
+    "^art$",
+    "^sketches$",
+    "^drawings?$"
+  ],
+  
+  "lowres_folders": [
+    "^tilesets$",
+    "^thumbnails?$"
+  ],
+  
+  "custom_albums": {
+    "^tezza_": "Albums/Tezza",
+    "^vsco_": "Albums/VSCO"
+  },
+  
+  "ignore_dirs": [
+    "ospd",
+    ".git",
+    "data-run",
+    "_duplicates"
+  ]
+}

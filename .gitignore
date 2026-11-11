@@ -1,0 +1,49 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+
+# OSPD runtime data & database
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+photo_sort.db*
+snapshots/
+runs/
+review/
+data/
+data-run/
+data-run*/
+run-data/
+
+# Backup directories (historical runs, review data)
+backup/
+backup_*/
+_backup/
+
+# Generated reports & logs
+report.html
+report.md
+*.log
+*.csv
+
+# Local configuration overrides (developer-specific)
+config.json
+config.yaml
+ospd.config.json
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
