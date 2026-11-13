@@ -27,6 +27,15 @@
   sudo apt-get install imagemagick ffmpeg
   ```
 
+#### Reproducible dev shell (`devenv` / Nix) — optional
+`devenv.nix` pins Python 3.13, `pytest` (via `requirements-dev.txt`), ImageMagick, ffmpeg, and procps:
+```bash
+devenv shell        # enter the shell (Python venv is created automatically)
+make test           # 27 tests, fully inside the pinned environment
+devenv test         # same suite through devenv's own test hook
+```
+With direnv installed, `direnv allow` activates it automatically on `cd`.
+
 ### 2. Setup Configuration
 Copy the configuration template:
 ```bash

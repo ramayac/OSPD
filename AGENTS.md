@@ -34,6 +34,15 @@ Customize the configuration:
 }
 ```
 
+### Reproducible Dev Environment (`devenv`, optional)
+`devenv.nix` pins Python 3.13, `pytest` (from `requirements-dev.txt`), ImageMagick, ffmpeg, and procps. Runtime code itself is standard-library only.
+
+```bash
+devenv shell     # or: direnv allow  (auto-activates on cd)
+make test        # 27 tests inside the pinned toolchain
+devenv test      # same suite through devenv's enterTest task
+```
+
 ### Configuration Resolution Precedence:
 1. **CLI flags:** `--root /path/to/photos`, `--data-dir /path/to/data`, `--config custom.json`
 2. **Environment variables:** `PICTURES_ROOT`, `OSPD_ROOT`, `OSPD_DATA_DIR`
